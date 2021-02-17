@@ -6,7 +6,7 @@ import os
 class CONSTANTS(object):
 
     # Application data directory
-    APPDATA_DIR = str(os.environ.get('config_file') % os.path.expanduser('~'))
+    APPDATA_DIR = os.environ.get('config_file') + str(os.path.expanduser('~'))
     # Resource directory for icons
     RESOURCE_DIR_ICONS = "../resources/icons/"
     # Resource directory for backgrounds
