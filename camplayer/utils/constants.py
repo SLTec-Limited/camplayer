@@ -13,7 +13,7 @@ class CONSTANTS(object):
     RESOURCE_DIR_BCKGRND = "../resources/backgrounds/"
     # Demo config path
     DEMO_CONFIG_PATH = "../examples/demo-config.ini"
-    CONFIG_PATH = os.environ.get('config_path')
+    CONFIG_PATH = str(os.environ.get('config_path') % APPDATA_DIR)
     # Cache directory for images and stream details
     CACHE_DIR = str("%scache/" % APPDATA_DIR)
 
