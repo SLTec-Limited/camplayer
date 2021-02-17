@@ -6,15 +6,14 @@ import os
 class CONSTANTS(object):
 
     # Application data directory
-    APPDATA_DIR = os.environ.get('config_file') + str(os.path.expanduser('~'))
+    APPDATA_DIR = str("%s/.camplayer/" % os.path.expanduser('~'))
     # Resource directory for icons
     RESOURCE_DIR_ICONS = "../resources/icons/"
     # Resource directory for backgrounds
     RESOURCE_DIR_BCKGRND = "../resources/backgrounds/"
     # Demo config path
     DEMO_CONFIG_PATH = "../examples/demo-config.ini"
-    # Default config path
-    CONFIG_PATH = str("%sconfig.ini" % APPDATA_DIR)
+    CONFIG_PATH = os.environ.get('config_file') + APPDATA_DIR
     # Cache directory for images and stream details
     CACHE_DIR = str("%scache/" % APPDATA_DIR)
 
